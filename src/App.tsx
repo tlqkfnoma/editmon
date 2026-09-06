@@ -21,6 +21,7 @@ function PortfolioApp() {
   const [activeVideoItem, setActiveVideoItem] = useState<PortfolioItem | null>(null);
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
   const [selectedServiceForInquiry, setSelectedServiceForInquiry] = useState<string>('editing');
+  const [inquiryPrefillMessage, setInquiryPrefillMessage] = useState<string>('');
 
   // Close modals on Escape key
   useEffect(() => {
@@ -104,7 +105,12 @@ function PortfolioApp() {
         {/* 7. Contact Section (Kakao Pay Customer Center style) */}
         <ContactSection
           lang={lang}
-          onOpenModal={() => setIsInquiryModalOpen(true)}
+          onOpenModal={(prefillNote) => {
+            if (prefillNote) {
+              setInquiryPrefillMessage(prefillNote);
+            }
+            setIsInquiryModalOpen(true);
+          }}
         />
       </main>
 
@@ -121,6 +127,7 @@ function PortfolioApp() {
         lang={lang}
         onClose={() => setIsInquiryModalOpen(false)}
         preselectedService={selectedServiceForInquiry}
+        prefilledMessage={inquiryPrefillMessage}
       />
 
       {/* Hidden Master Admin Auth Modal (Password: 0313) */}

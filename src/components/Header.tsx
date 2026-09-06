@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenContac
     { label: lang === 'KR' ? '번역비교' : 'Translation', href: '#translation' },
     { label: lang === 'KR' ? '프로세스' : 'Process', href: '#process' },
     { label: lang === 'KR' ? '신뢰도' : 'Trust', href: '#trust' },
-    { label: lang === 'KR' ? '문의하기' : 'Contact', href: '#contact' },
+    { label: lang === 'KR' ? '견적 & 문의' : 'Estimate & Contact', href: '#contact' },
   ];
 
   return (

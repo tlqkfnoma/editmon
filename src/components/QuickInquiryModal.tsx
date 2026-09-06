@@ -8,6 +8,7 @@ interface QuickInquiryModalProps {
   lang: Language;
   onClose: () => void;
   preselectedService?: string;
+  prefilledMessage?: string;
 }
 
 export const QuickInquiryModal: React.FC<QuickInquiryModalProps> = ({
@@ -15,14 +16,21 @@ export const QuickInquiryModal: React.FC<QuickInquiryModalProps> = ({
   lang,
   onClose,
   preselectedService,
+  prefilledMessage,
 }) => {
   const [service, setService] = useState(preselectedService || 'editing');
   const [clientName, setClientName] = useState('');
   const [contact, setContact] = useState('');
   const [projectLink, setProjectLink] = useState('');
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(prefilledMessage || '');
   const [submitted, setSubmitted] = useState(false);
   const [copiedId, setCopiedId] = useState(false);
+
+  React.useEffect(() => {
+    if (prefilledMessage) {
+      setMessage(prefilledMessage);
+    }
+  }, [prefilledMessage]);
 
   if (!isOpen) return null;
 

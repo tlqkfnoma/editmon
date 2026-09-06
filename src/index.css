@@ -30,3 +30,28 @@
   transform: translateY(-6px);
   box-shadow: 0 28px 60px rgba(255, 235, 0, 0.3);
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #official-quotation-sheet, #official-quotation-sheet * {
+    visibility: visible;
+  }
+  #official-quotation-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20mm 15mm !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}

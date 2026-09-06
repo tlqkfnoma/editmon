@@ -101,3 +101,32 @@ export interface StatItem {
   };
   icon: string;
 }
+
+export interface ResumeExperience {
+  id: string;
+  period: string;
+  role: string;
+  clientOrCompany: string;
+  description: string;
+  achievements: string[];
+}
+
+export interface ResumeData {
+  title: string;
+  summary: string;
+  skills: {
+    category: string;
+    items: string[];
+  }[];
+  experiences: ResumeExperience[];
+  education: {
+    period: string;
+    name: string;
+    major: string;
+  }[];
+  certifications: {
+    date: string;
+    title: string;
+    scoreOrIssuer: string;
+  }[];
+}
