@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+.soft-3d-card {
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soft-3d-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.08);
+}
+
+.soft-3d-card-yellow {
+  background-color: #FFEB00;
+  border-radius: 40px;
+  box-shadow: 0 20px 50px rgba(255, 235, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soft-3d-card-yellow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(255, 235, 0, 0.3);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "KIM PAY - Video & Translation Portfolio",
+  "description": "감각적인 영상 편집 및 고품질 영어 번역 포트폴리오 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
